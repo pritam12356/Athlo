@@ -12,7 +12,11 @@ This synopsis details the requirements, design decisions, system architecture, d
 #TECHNOLOGY STACK
 
 Frontend: HTML5, CSS3, JavaScript (Vanilla) — ensures a lightweight and dependency-minimal user interface.
+
 Backend: Node.js with Express.js — provides event-driven, non-blocking server-side logic and Restful API support.
+
 Database: MySQL — relational DBMS suitable for transactional integrity (bookings, orders).
+
 Tools: VS Code, Git/GitHub, Postman for API testing, MySQL Workbench for DB design.
+
 Deployment: Frontend can be hosted on Netlify ; backend can be deployed on Render/Heroku with a connected managed MySQL instance.
