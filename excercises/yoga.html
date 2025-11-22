@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga Poses</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+          url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1500&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        color: #fff;
+        min-height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #fff;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .pose {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        text-align: center;
+        padding: 25px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+        border: 2px solid transparent;
+        color: #333;
+      }
+
+      .pose:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        border-color: #a8edea;
+      }
+
+      .pose img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .pose:hover img {
+        transform: scale(1.05);
+      }
+
+      .pose h3 {
+        margin: 20px 0 15px;
+        color: #2c3e50;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .pose p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #444;
+      }
+
+      .pose a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: linear-gradient(45deg, #a8edea, #fed6e3);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+
+      .pose a:hover {
+        background: linear-gradient(45deg, #fed6e3, #a8edea);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Yoga Poses</h1>
+
+    <div class="grid">
+      <div class="pose">
+        <img src="/images/yoga/img1.png" alt="Warrior I Pose" />
+        <h3>Warrior I (Virabhadrasana I)</h3>
+        <p>
+          This standing pose builds strength in the legs and core, improves
+          balance, and opens the hips and chest. It's energizing and helps with
+          focus and determination.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img2.jpg"
+          alt="Tree Pose"
+        />
+        <h3>Tree Pose (Vrksasana)</h3>
+        <p>
+          A balancing pose that strengthens the legs and core while improving
+          concentration and stability. It encourages grounding and can enhance
+          mental clarity.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img3.jpg"
+          alt="Child's Pose"
+        />
+        <h3>Child's Pose (Balasana)</h3>
+        <p>
+          A restorative pose that gently stretches the back, hips, and thighs.
+          It's calming and helps release tension, making it ideal for relaxation
+          and recovery.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img4.jpg"
+          alt="Cobra Pose"
+        />
+        <h3>Cobra Pose (Bhujangasana)</h3>
+        <p>
+          This backbend strengthens the spine and opens the chest and shoulders.
+          It improves posture and can relieve lower back pain when practiced
+          mindfully.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img5.jpg"
+          alt="Seated Forward Bend"
+        />
+        <h3>Seated Forward Bend (Paschimottanasana)</h3>
+        <p>
+          A seated pose that stretches the hamstrings, back, and calves. It
+          calms the mind, reduces stress, and promotes flexibility in the
+          posterior chain.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img6.jpg"
+          alt="Warrior II Pose"
+        />
+        <h3>Warrior II (Virabhadrasana II)</h3>
+        <p>
+          A powerful standing pose that strengthens the legs, opens the hips,
+          and builds stamina. It enhances focus and is excellent for building
+          inner strength.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img7.jpg"
+          alt="Bridge Pose"
+        />
+        <h3>Bridge Pose (Setu Bandhasana)</h3>
+        <p>
+          A gentle backbend that strengthens the glutes, hamstrings, and lower
+          back while opening the chest. It improves spinal flexibility and
+          relieves stress.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img8.jpg"
+          alt="Downward Dog Pose"
+        />
+        <h3>Downward Dog (Adho Mukha Svanasana)</h3>
+        <p>
+          A foundational pose that stretches the hamstrings, calves, and
+          shoulders while strengthening the arms and legs. It promotes full-body
+          awareness and is great for relieving stress.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="pose">
+        <img
+          src="/images/yoga/img9.jpg"
+          alt="Cat-Cow Pose"
+        />
+        <h3>Cat-Cow Pose (Marjaryasana-Bitilasana)</h3>
+        <p>
+          A dynamic flow that warms up the spine, improves flexibility, and
+          synchronizes breath with movement. It's perfect for relieving back
+          tension and enhancing mobility.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </body>
+</html>

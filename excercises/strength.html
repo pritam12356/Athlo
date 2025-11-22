@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Training</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            min-height: 100vh;
+            
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fff;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .strength {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            text-align: center;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .strength:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            border-color: #ff7e5f;
+        }
+        .strength img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .strength:hover img {
+            transform: scale(1.05);
+        }
+        .strength h3 {
+            margin: 20px 0 15px;
+            color: #2c3e50;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .strength p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+        .strength a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .strength a:hover {
+            background: linear-gradient(45deg, #feb47b, #ff7e5f);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Strength Training</h1>
+    <div class="grid">
+        <div class="strength">
+            <img src="/images/strength/img1.jpg" alt="Squats">
+            <h3>Squats</h3>
+            <p>A fundamental lower-body exercise that targets the quads, hamstrings, and glutes. It builds strength, improves mobility, and is essential for overall leg development in the gym.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img2.jpg" alt="Deadlifts">
+            <h3>Deadlifts</h3>
+            <p>A compound movement that engages the entire posterior chain, including the back, glutes, and hamstrings. It enhances grip strength and is key for building power and stability.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img3.jpg" alt="Bench Press">
+            <h3>Bench Press</h3>
+            <p>A classic upper-body exercise focusing on the chest, shoulders, and triceps. It promotes muscle growth and strength in the pushing muscles, perfect for gym routines.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img4.jpg" alt="Pull-ups">
+            <h3>Pull-ups</h3>
+            <p>An effective bodyweight exercise for the back and biceps that builds upper body strength and improves posture. Great for assisted or full pull-up bars in the gym.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img5.jpg" alt="Overhead Press">
+            <h3>Overhead Press</h3>
+            <p>A shoulder-focused exercise that strengthens the deltoids, triceps, and core. It enhances overhead stability and is ideal for standing or seated variations with dumbbells or barbells.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img6.jpg" alt="Lunges">
+            <h3>Lunges</h3>
+            <p>A unilateral leg exercise that targets the quads, glutes, and hamstrings while improving balance. Walking or stationary lunges add variety to strength training sessions.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img7.jpg" alt="Rows">
+            <h3>Rows</h3>
+            <p>A pulling exercise for the back muscles, including the lats and rhomboids. Using dumbbells, barbells, or machines, it promotes balanced upper body development.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="strength">
+            <img src="/images/strength/img8.jpg" alt="Planks">
+            <h3>Planks</h3>
+            <p>An isometric core exercise that builds endurance in the abs, obliques, and lower back. It's a simple yet effective addition to strength training for stability and posture.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>

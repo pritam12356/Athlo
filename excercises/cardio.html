@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Cardio Training</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+
+           
+            background: 
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fff;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .cardio {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            text-align: center;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .cardio:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            border-color: #667eea;
+        }
+        .cardio img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .cardio:hover img {
+            transform: scale(1.05);
+        }
+        .cardio h3 {
+            margin: 20px 0 15px;
+            color: #2c3e50;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .cardio p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+        .cardio a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .cardio a:hover {
+            background: linear-gradient(45deg, #764ba2, #667eea);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cardio Training</h1>
+    <div class="grid">
+        <div class="cardio">
+            <img src="/images/cardio/img1.jpg" alt="Stationary Cycling">
+            <h3>Stationary Cycling</h3>
+            <p>A low-impact activity on the stationary bike that strengthens legs, improves heart health, and enhances joint mobility. Ideal for gym workouts with adjustable resistance for all levels.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img2.jpg" alt="Jumping Rope">
+            <h3>Jumping Rope</h3>
+            <p>An efficient full-body workout that increases agility, coordination, and calorie burn. Great for gym floors, improving cardiovascular endurance in quick, intense sessions.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img3.jpg" alt="HIIT Workout">
+            <h3>High-Intensity Interval Training (HIIT)</h3>
+            <p>A fast-paced gym workout alternating intense bursts of activity with rest periods. It maximizes calorie burn, boosts metabolism, and improves aerobic capacity using gym equipment.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img4.jpg" alt="Elliptical Training">
+            <h3>Elliptical Training</h3>
+            <p>A low-impact cardio machine that simulates running or climbing stairs without joint stress. It targets the whole body, improves endurance, and is excellent for longer sessions in the gym.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img5.jpg" alt="Stair Climber">
+            <h3>Stair Climber</h3>
+            <p>A challenging cardio workout on the stair climber that builds leg strength, enhances cardiovascular fitness, and burns a high number of calories. Ideal for simulating uphill climbs indoors.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img6.jpg" alt="Boxing Workout">
+            <h3>Boxing Workout</h3>
+            <p>A dynamic cardio session using punching bags or shadow boxing that improves coordination, builds upper body strength, and provides an intense full-body burn in a gym setting.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img7.jpg" alt="Burpee Circuit">
+            <h3>Burpee Circuit</h3>
+            <p>A bodyweight cardio exercise combining squats, jumps, and push-ups for a high-intensity workout. It boosts heart rate, builds strength, and is perfect for gym circuit training.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img8.jpg" alt="Rowing Machine">
+            <h3>Rowing Machine</h3>
+            <p>A full-body cardio workout that engages the back, arms, and legs while improving cardiovascular endurance. It's low-impact and great for building overall strength and stamina.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img9.jpg" alt="Kettlebell Swings">
+            <h3>Kettlebell Swings</h3>
+            <p>A explosive cardio movement that targets the hips, glutes, and core while elevating heart rate. It builds power and endurance, making it a versatile gym exercise.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cardio">
+            <img src="/images/cardio/img10.jpg" alt="Treadmill Running">
+            <h3>Treadmill Running</h3>
+            <p>A high-impact cardio exercise on the treadmill that improves cardiovascular health, builds endurance, and burns calories. Perfect for indoor gym sessions to boost overall fitness and track progress.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>
