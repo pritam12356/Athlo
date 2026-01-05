@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATHLO GYM - Pricing</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      min-height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 40px;
+      margin: 50px 0 20px;
+      letter-spacing: 2px;
+    }
+
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+      padding: 50px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .product {
+      background: rgba(20, 20, 20, 0.9);
+      padding: 45px 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(233, 30, 99, 0.7);
+    }
+
+    .product i {
+      font-size: 55px;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    .product h4 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .product p {
+      font-size: 22px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .button {
+      padding: 14px 30px;
+      border: none;
+      background: #e91e63;
+      color: white;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="pricing" id="pricing">
+    <h3>OUR PRICING PLANS</h3>
+
+    <section class="pricing-container">
+
+      <div class="product">
+        <i class="fa-solid fa-calendar"></i>
+        <h4>Basic Membership</h4>
+        <p>₹ 3,000 / month</p>
+        <button class="button" onclick="payNow(300000, 'Basic Membership')">
+          Pay Now
+        </button>
+      </div>
+
+      <div class="product">
+        <i class="fa-solid fa-star"></i>
+        <h4>Premium Membership</h4>
+        <p>₹ 5,000 / month</p>
+        <button class="button" onclick="payNow(500000, 'Premium Membership')">
+          Pay Now
+        </button>
+      </div>
+
+      <div class="product">
+        <i class="fa-solid fa-person"></i>
+        <h4>Personal Training</h4>
+        <p>₹ 4,000 / month</p>
+        <button class="button" onclick="payNow(400000, 'Personal Training')">
+          Pay Now
+        </button>
+      </div>
+
+      <div class="product">
+        <i class="fa-solid fa-people-group"></i>
+        <h4>Group Classes</h4>
+        <p>₹ 1,500 / month</p>
+        <button class="button" onclick="payNow(150000, 'Group Classes')">
+          Pay Now
+        </button>
+      </div>
+
+      <div class="product">
+        <i class="fa-solid fa-dumbbell"></i>
+        <h4>Custom Workout Plan</h4>
+        <p>₹ 2,000</p>
+        <button class="button" onclick="payNow(200000, 'Custom Workout Plan')">
+          Pay Now
+        </button>
+      </div>
+
+    </section>
+  </section>
+
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script>
+    function payNow(amount, planName) {
+      var options = {
+        key: "rzp_test_1DP5mmOlF5G5ag",
+        amount: amount,
+        currency: "INR",
+        name: "ATHLO GYM",
+        description: planName,
+        image: "https://cdn-icons-png.flaticon.com/512/2964/2964514.png",
+        handler: function (response) {
+          alert(
+            "Payment Successful!\n\n" +
+            "Plan: " + planName + "\n" +
+            "Payment ID: " + response.razorpay_payment_id
+          );
+        },
+        theme: {
+          color: "#e91e63"
+        }
+      };
+
+      var rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+
+</body>
+</html>

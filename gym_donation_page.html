@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Gym - UPI Donation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .qr-section {
+            margin: 30px 0;
+            padding: 30px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border: 2px dashed #667eea;
+        }
+
+        .qr-code {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .upi-id {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .copy-btn:active {
+            transform: translateY(0);
+        }
+
+        .instructions {
+            margin-top: 30px;
+            text-align: left;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+        }
+
+        .instructions h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .upi-apps {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .upi-app {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .note {
+            margin-top: 25px;
+            padding: 20px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .note strong {
+            color: #856404;
+        }
+
+        .note p {
+            color: #856404;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💪 Support Our Gym</h1>
+            <p>Donate via UPI - Quick & Secure</p>
+        </div>
+
+        <div class="content">
+            <h2 style="color: #333; margin-bottom: 20px;">Scan to Donate</h2>
+            
+            <div class="qr-section">
+                <div class="qr-code" id="qrcode"></div>
+                <p style="color: #666; margin-bottom: 10px;">Scan with any UPI app</p>
+                <div class="upi-id" id="upiId">8292385016@upi</div>
+                <button class="copy-btn" onclick="copyUPI()">📋 Copy UPI ID</button>
+            </div>
+
+            <div class="upi-apps">
+                <div class="upi-app">Google Pay</div>
+                <div class="upi-app">PhonePe</div>
+                <div class="upi-app">Paytm</div>
+                <div class="upi-app">BHIM</div>
+            </div>
+
+            <div class="instructions">
+                <h3>How to Donate:</h3>
+                <ol>
+                    <li>Open any UPI app on your phone</li>
+                    <li>Scan the QR code above or enter the UPI ID</li>
+                    <li>Enter your donation amount</li>
+                    <li>Complete the payment securely in your app</li>
+                </ol>
+            </div>
+
+            <div class="note">
+                <strong>🔒 Safe & Secure</strong>
+                <p>Your payment is processed directly through your UPI app. We never see your banking details. All transactions are encrypted and secure.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">UPI ID copied to clipboard!</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // Generate UPI QR Code
+        const upiId = "8292385016@upi";
+        const upiString = `upi://pay?pa=${upiId}&pn=Gym Donation&cu=INR`;
+        
+        new QRCode(document.getElementById("qrcode"), {
+            text: upiString,
+            width: 220,
+            height: 220,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // Copy UPI ID to clipboard
+        function copyUPI() {
+            const upiText = document.getElementById("upiId").textContent;
+            
+            navigator.clipboard.writeText(upiText).then(() => {
+                showToast();
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = upiText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast();
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
